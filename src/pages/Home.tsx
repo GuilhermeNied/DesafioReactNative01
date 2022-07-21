@@ -21,6 +21,9 @@ export function Home() {
 
   }
 
+  console.log(tasks.length);
+
+
   function handleToggleTaskDone(id: number) {
     //TODO - toggle task done if exists
   }
