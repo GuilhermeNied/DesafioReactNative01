@@ -12,12 +12,11 @@ export function TodoInput({ addTask }: TodoInputProps) {
   function handleAddNewTask() {
     //TODO - Call addTask if task not empty and clean input value 
 
-    if (task === '') {
+    if (!task) {
       return;
     }
-
     addTask(task)
-    setTask("")
+    setTask('')
   }
 
   return (
@@ -36,7 +35,7 @@ export function TodoInput({ addTask }: TodoInputProps) {
         activeOpacity={0.7}
         style={styles.addButton}
         onPress={handleAddNewTask}
-      //TODO - onPress prop
+
       >
         <Icon name="chevron-right" size={24} color="#B2B2B2" />
       </TouchableOpacity>
